@@ -22,6 +22,7 @@ const slides = [
   const leftArrow = document.getElementById("left-arrow");
   const rightArrow = document.getElementById("right-arrow");
   const bannerImg = document.getElementById("banner-img");
+  const paragraphbanner = document.querySelector("p")
 //   const containerDots = document.querySelector(".dots");
 
   // Initialiser l'index de la diapositive actuelle à 0
@@ -30,8 +31,10 @@ const slides = [
   // Fonction qui met à jour l'image et la description en fonction de l'index de la diapositive
   function updateBanner() {
     const currentSlide = slides[currentSlideIndex];
-    bannerImg.src = "./assets/images/slideshow/" + currentSlide.image;
+    bannerImg.src = "./assets/images/slideshow/" + currentSlide.image;	
+	paragraphbanner.innerHTML=currentSlide.tagLine;
     updateDots();
+
   }
 
   // Fonction qui met à jour les points de la bannière en fonction de l'index de la diapositive
