@@ -17,13 +17,13 @@ const slides = [
     }
   ];
 
-  // Sélectionner les éléments HTML pertinents
+  // Sélectionner les éléments DOM
   const banner = document.getElementById("banner");
   const leftArrow = document.getElementById("left-arrow");
   const rightArrow = document.getElementById("right-arrow");
   const bannerImg = document.getElementById("banner-img");
   const paragraphbanner = document.querySelector("p")
-//   const containerDots = document.querySelector(".dots");
+
 
   // Initialiser l'index de la diapositive actuelle à 0
   let currentSlideIndex = 0;
@@ -59,6 +59,7 @@ const slides = [
     currentSlideIndex = (currentSlideIndex + slides.length - 1) % slides.length;
     updateBanner()
   });
+  // 
 
   // Ajouter un événement de click à la flèche droite
   rightArrow.addEventListener("click", function (event) {
